@@ -1,0 +1,33 @@
+{% extends 'main\temp_page.html' %}
+
+{% block main %}
+<div class="Klassen">
+    <div class="Barbar">
+        {% load static %}
+        <figure>
+            <img src="{% static 'img\barbar.jpg' %}" alt="dnd class barbarian">
+            <figcaption></figcaption>
+                <div>
+                    <p>Unter einem Barbaren kann man sich einen stereotypischen Wikinger vorstellen, welcher mit einer riesigen Axt Gegner in Angst und Schrecken versetzt. Charaktere mit dieser Klasse können im Kampf ihre Wut nutzen, um weniger Schaden zu nehmen und verschiedene andere Boni zu kriegen.</p>
+                    <p>Barbaren nehmen oft die Rolle des “tank” in einer Gruppe ein. Das bedeutet, dass sie versuchen Gegner vom Rest der Charaktere abzuhalten und bei Angriffen schützend im Weg zu stehen.</p>
+                </div>
+        </figure>
+    </div>
+
+    <div class="Bard">
+        <div>
+            {% load static %}
+            <figure>
+                <img src="{% static 'img\barde.jpg' %}" alt="dnd class barbarian">
+                <figcaption></figcaption>
+                    <div>
+                        <p>Barden sind Sänger, Musiker oder andere Formen von Entertainer. Sie nutzen ihre Kunst, um Magie zu erzeugen, mit der sie sowohl Verbündete unterstützen, als auch Gegnern schaden können. Sie können zudem sich und andere inspirieren, um Würfelwürfe zu manipulieren.</p>
+                        <p>Barden nehmen in Gruppen oft eine unterstützende Rolle ein, indem sie die anderen Charaktere in dem verstärken, was diese gut können. Zudem können sie in sozialen Interaktionen oft ihre meist hohen Charisma-Werte nutzen, um als das Gesicht der Gruppe agieren.</p>
+                    </div>
+            </figure>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
