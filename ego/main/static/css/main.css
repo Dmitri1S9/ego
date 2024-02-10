@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #4CAF50 ;
     color: white;
     text-align: center;
     padding: 1em 0;
@@ -42,6 +42,43 @@ main {
     padding: 20px;
 }
 
+.Barbar {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1000px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+    .Barbar figure {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+    }
+
+        .Barbar figure img {
+            width: 25%;
+            height: auto;
+            object-fit: contain;
+            margin: 5px;
+        }
+
+        .Barbar figure figcaption {
+            width: 100%;
+            text-align: center;
+            font-style: italic;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+    .Barbar p {
+        margin: 10px;
+        text-align: justify;
+        background-color: aquamarine;
+    }
+
 section {
     margin-bottom: 20px;
 }
@@ -52,3 +89,4 @@ footer {
     text-align: center;
     padding: 1em 0;
 }
+

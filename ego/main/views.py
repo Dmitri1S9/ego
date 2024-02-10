@@ -7,3 +7,7 @@ def print_start_html(request):
 
 def test(request):
     return render(request, 'main/test.html')
+
+
+def world(request):
+    return render(request, 'main/world.html')
