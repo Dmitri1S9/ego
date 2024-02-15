@@ -6,14 +6,16 @@
 
 <div class="worldMenu">
     {% load static %}
-    <button src="{% static 'img/buttons/menuButton.jpg' %}" class="menuButton" alt="Menu Button"></button>
-    <div class="menu">
-        <p>Menu is visible!</p>
+    <div>
+        <img class="menuImageButton" src="{% static 'img/buttons/menuButton.jpg' %}" />
+        {% load static %}
+        <script src="{% static 'js\main.js' %}"></script>
     </div>
 </div>
 
 <div class="worldMap">
-
+    {% load static %}
+    <script src="{% static 'js\mapMaker.js' %}"></script>
 </div>
 
 {% endblock %}

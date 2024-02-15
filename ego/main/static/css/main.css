@@ -1,3 +1,4 @@
+/* Общие стили */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,7 +9,7 @@ body {
 }
 
 header {
-    background-color: #4CAF50 ;
+    background-color: #4CAF50;
     color: white;
     text-align: center;
     padding: 1em 0;
@@ -19,27 +20,35 @@ nav {
     justify-content: center;
     background-color: #333;
     padding: 0.5em 0;
+    height: 50px; /* Устанавливаем высоту меню */
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
 
-nav li {
-    margin-right: 20px;
-}
+    nav li {
+        margin-right: 10px; /* Уменьшаем отступ между элементами меню */
+        padding: 0 10px; /* Добавляем внутренний отступ */
+    }
 
-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
+        nav li:hover {
+            background-color: #555; /* Цвет фона при наведении мыши */
+            cursor: pointer; /* Изменяем курсор при наведении */
+        }
+
+    nav a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
 
 main {
-    padding: 20px;
+    padding-right: 10px;
+    display: flex;
 }
 
 section {
@@ -53,3 +62,31 @@ footer {
     padding: 1em 0;
 }
 
+.worldMenu {
+    background-color: #4c272780;
+    width: 20%;
+    padding: 3px;
+    justify-content: left;
+}
+
+.menuImageButton {
+    height: 40%;
+    width: 40%;
+    padding: 2pt;
+    justify-content: left;
+    justify-content: flex-start;
+}
+
+.worldMap {
+    margin: 0;
+    width: 80%;
+    white-space: nowrap;
+}
+
+.mapPiece {
+    height: 200px;
+    width: 200px;
+    padding: 0;
+    z-index: -1;
+    margin: 0;
+}
