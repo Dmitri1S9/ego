@@ -5,8 +5,12 @@
     "\\ego\\main",
     "\\ego\\main\\static",
     "\\ego\\main\\static\\css",
-    "\\ego\\main\\static\\js"
+    "\\ego\\main\\static\\img",
+    "\\ego\\main\\static\\img\\buttons",
+    "\\ego\\main\\static\\js",
+    "\\ego\\main\\templates",
+    "\\ego\\main\\templates\\main"
   ],
-  "SelectedNode": "\\ego\\main\\views.py",
+  "SelectedNode": "\\ego\\main\\static\\css\\map.css",
   "PreviewInSolutionExplorer": false
 }

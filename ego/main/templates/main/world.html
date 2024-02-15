@@ -1,31 +1,17 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Фэнтезийный мир</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/map.css' %}">
+	<meta charset="utf-8">
+	<title>Это заголовок тайтл</title>
+	{% load static %}
+	<script src="{% static 'js\map.js' %}"></script>
 </head>
 <body>
-    <header>
-        <h1>Фэнтезийный мир</h1>
-    </header>
-    <main>
-        <section id="map">
-            </section>
-        <section id="characters">
-            <h2>Персонажи</h2>
-            <ul>
-                </ul>
-        </section>
-        <section id="creatures">
-            <h2>Существа</h2>
-            <ul>
-                </ul>
-        </section>
-    </main>
-    {% load static %}
-    <script src="{% static 'js\map.js' %}"></script>
+	<h2>What Can JavaScript Do?</h2>
+
+	<p id="demo">JavaScript can change HTML content.</p>
+
+	<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
 </body>
 </html>
+

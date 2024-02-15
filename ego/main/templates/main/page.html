@@ -3,147 +3,17 @@
 {% block main %}
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/main.css' %}">
-<div class="Klassen">
 
-    <div class="Barbar">
-        <figure>
-            {% load static %}
-            <img src="{% static 'img\charakters\barbar.jpg' %}" alt="dnd class barbar">
-            <img src="{% static 'img\charakters\barbar_2.jpg' %}" alt="dnd class barbar">
-            <img src="{% static 'img\charakters\barbar_3.jpg' %}" alt="dnd class barbar">
-            <img src="{% static 'img\charakters\barbar_4.jpg' %}" alt="dnd class barbar">
-            <figcaption></figcaption>
-            <div>
-                <p>Unter einem Barbaren kann man sich einen stereotypischen Wikinger vorstellen, welcher mit einer riesigen Axt Gegner in Angst und Schrecken versetzt. Charaktere mit dieser Klasse können im Kampf ihre Wut nutzen, um weniger Schaden zu nehmen und verschiedene andere Boni zu kriegen.</p>
-                <p>Barbaren nehmen oft die Rolle des “tank” in einer Gruppe ein. Das bedeutet, dass sie versuchen Gegner vom Rest der Charaktere abzuhalten und bei Angriffen schützend im Weg zu stehen.</p>
-            </div>
-        </figure>
+<div class="worldMenu">
+    {% load static %}
+    <button src="{% static 'img/buttons/menuButton.jpg' %}" class="menuButton" alt="Menu Button"></button>
+    <div class="menu">
+        <p>Menu is visible!</p>
     </div>
-
-    <div class="Bard">
-        <div>
-            <figure>
-                {% load static %}
-                <img src="{% static 'img\charakters\barde.jpg' %}" alt="dnd class bard">
-                <figcaption></figcaption>
-                <div>
-                    <p>Barden sind Sänger, Musiker oder andere Formen von Entertainer. Sie nutzen ihre Kunst, um Magie zu erzeugen, mit der sie sowohl Verbündete unterstützen, als auch Gegnern schaden können. Sie können zudem sich und andere inspirieren, um Würfelwürfe zu manipulieren.</p>
-                    <p>Barden nehmen in Gruppen oft eine unterstützende Rolle ein, indem sie die anderen Charaktere in dem verstärken, was diese gut können. Zudem können sie in sozialen Interaktionen oft ihre meist hohen Charisma-Werte nutzen, um als das Gesicht der Gruppe agieren.</p>
-                </div>
-            </figure>
-        </div>
-    </div>
-
-    <div class="Druid">
-        <div>
-            <figure>
-                {% load static %}
-                <img src="{% static 'img\charakters\druid.jpg' %}" alt="dnd class druid">
-                <figcaption></figcaption>
-                <div>
-                    <p>Druiden wirken Magie, indem sie die Kraft der Natur für sich nutzen. Sie können sowohl Pflanzen und Tiere als auch die Elemente kontrollieren, um damit Probleme zu lösen. Zudem können sie sich selbst in Tiere verwandeln, um so als kleiner Marienkäfer unter einer Tür hindurchzukriechen oder als gewaltiger Bär in einen Kampf einzugreifen.</p>
-                    <p>Druiden haben in Gruppen oft eine unterstützende Rolle, wobei es hier sehr viel Flexibilität gibt. Mit ihrer Kontrolle der Elemente können sie oft gewaltige Kräfte freisetzen, um so die Geschichte maßgeblich zu verändern.</p>
-                </div>
-            </figure>
-        </div>
-    </div>
-
-    <div class="Hexenmeister">
-        <div>
-            <figure>
-                {% load static %}
-                <img src="{% static 'img\charakters\hexenmeister.jpg' %}" alt="dnd class hexenmeister">
-                <img src="{% static 'img\charakters\hexenmeister_2.jpg' %}" alt="dnd class hexenmeister">
-                <figcaption></figcaption>
-                <div>
-                    <p>Druiden haben in Gruppen oft eine unterstützende Rolle, wobei es hier sehr viel Flexibilität gibt. Mit ihrer Kontrolle der Elemente können sie oft gewaltige Kräfte freisetzen, um so die Geschichte maßgeblich zu verändern.</p>
-                    <p>Hexenmeister können in einem Kampf oft viel Schaden austeilen und Wesen aus anderen Welten beschwören, um die Gruppe zu unterstützen. Zudem können sie mit ihren oft hohen Charisma-Werten gut in sozialen Interaktionen für die Gruppe sprechen.</p>
-                </div>
-            </figure>
-        </div>
-    </div>
-
-    <div class="Kämpfer">
-        <div>
-            <figure>
-                <div>
-                    {% load static %}
-                    <img src="{% static 'img\charakters\kämpfer.jpg' %}" alt="dnd class hexenmeister">
-                    <img src="{% static 'img\charakters\kämpfer_2.jpg' %}" alt="dnd class hexenmeister">
-                    <img src="{% static 'img\charakters\kämpfer_3.jpg' %}" alt="dnd class hexenmeister">
-                    <img src="{% static 'img\charakters\kämpfer_4.jpg' %}" alt="dnd class hexenmeister">
-                    <img src="{% static 'img\charakters\kämpfer_5.jpg' %}" alt="dnd class hexenmeister">
-                    <img src="{% static 'img\charakters\kämpfer_6.jpg' %}" alt="dnd class hexenmeister">
-                </div>
-                <figcaption></figcaption>
-                <div>
-                    <p>Druiden haben in Gruppen oft eine unterstützende Rolle, wobei es hier sehr viel Flexibilität gibt. Mit ihrer Kontrolle der Elemente können sie oft gewaltige Kräfte freisetzen, um so die Geschichte maßgeblich zu verändern.</p>
-                    <p>Hexenmeister können in einem Kampf oft viel Schaden austeilen und Wesen aus anderen Welten beschwören, um die Gruppe zu unterstützen. Zudem können sie mit ihren oft hohen Charisma-Werten gut in sozialen Interaktionen für die Gruppe sprechen.</p>
-                </div>
-            </figure>
-        </div>
-    </div>
-
-    <div class="Kleriker">
-        <div>
-            <figure>
-                {% load static %}
-                <img src="{% static 'img\charakters\kleriker.jpg' %}" alt="dnd class kleriker">
-                <figcaption></figcaption>
-                <div>
-                    <p>Kleriker sind Priester einer Gottheit und können durch ihren Glauben Magie wirken. Sie heilen Verbündete und verzaubern Gegner, um im Kampf die Oberhand zu gewinnen. Zudem können sie mit den Göttern in Kontakt treten um diese um Rat und Unterstützung zu bitten.</p>
-                    <p>Kleriker können durchaus den einen oder anderen Treffer ab, übernehmen aber in Gruppen eine eher unterstützende Rolle.</p>
-                </div>
-            </figure>
-        </div>
-    </div>
-
-    <div class="Magier">
-        <div>
-            <figure>
-                {% load static %}
-                <img src="{% static 'img\charakters\magier.jpg' %}" alt="dnd class magier">
-                <img src="{% static 'img\charakters\magier_2.jpg' %}" alt="dnd class magier">
-                <img src="{% static 'img\charakters\magier_3.jpg' %}" alt="dnd class magier">
-                <figcaption></figcaption>
-                <div>
-                    <p>Magier sind Gelehrte, welche die Rätsel der Magie entschlüsseln und diese für sich nutzen. Sie fokussieren sich meist auf eine Schule der Magie und sammeln Zaubersprüche in einem großen Buch. Das viele Wissen gibt ihnen die Macht, die Welt in ihren Grundfesten zu erschüttern.</p>
-                    <p>Magier übernehmen in Gruppen oft die Rolle des magischen Schadens-Austeilers. Sie können zudem sehr hilfreich sein, wenn die Gruppe vor einem Rätsel steht und Intelligenz und Wissen gefragt sind.</p>
-                </div>
-            </figure>
-        </div>
-    </div>
-
-    <div class="Mönch">
-        <div>
-            <figure>
-                {% load static %}
-                <img src="{% static 'img\charakters\mönch.jpg' %}" alt="dnd class mönch">
-                <figcaption></figcaption>
-                <div>
-                    <p>Mönche sind Meister ihrer Körper und der spirituellen Welt. Sie können Gegner im Kampf mit gezielten Schlägen außer Gefecht setzten und sind dabei so schnell, dass diese es nicht einmal merken.</p>
-                    <p>Mönche können im Kampf schnell viele Gegner ausschalten und bleiben dabei oft selbst unversehrt, was sie in einer Gruppe oft an vorderster Front am effektivsten macht.</p>
-                </div>
-            </figure>
-        </div>
-    </div>
-
-    <div class="Paladin">
-        <div>
-            <figure>
-                {% load static %}
-                <img src="{% static 'img\charakters\paladin.jpg' %}" alt="dnd class magier">
-                <figcaption></figcaption>
-                <div>
-                    <p>Ähnlich wie Kleriker sind auch Paladine im Namen eines Gottes auf einer Mission. Diese schwer gepanzerten Krieger sind allerdings etwas weniger der Magie als vielmehr der physischen Kraft zugeneigt. Sie können göttliche Macht in ihre Schläge stecken, um damit Gegner zu vernichten, aber auch heilende Hände verwenden, um Wunden zu versorgen.</p>
-                    <p>Paladine nehmen oft die Rolle des “tank” in einer Gruppe ein. Sie stehen also vor ihren Verbündeten, um diese zu schützen, können aber auch viel Schaden an Gegnern ausrichten.</p>
-                </div>
-            </figure>
-        </div>
-    </div>
-
-
 </div>
 
+<div class="worldMap">
+
+</div>
 
 {% endblock %}

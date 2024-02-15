@@ -15,23 +15,20 @@ main {
     flex-wrap: wrap;
 }
 
-#map {
-    width: 50%;
-    height: 400px;
-}
-
-#characters, #creatures {
-    width: 50%;
+.worldMenu {
+    background-color:#310808;
+    height: 600px;
+    width: 300px;
     padding: 10px;
 }
 
-#characters ul, #creatures ul {
-    list-style: none;
-    padding: 0;
+.menuButton {
+    height: 200px;
+    width: 200px;
+    /* Add cursor:pointer to indicate the button is clickable */
+    cursor: pointer;
 }
 
-#characters ul li, #creatures ul li {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
+.menu {
+    visibility: hidden;
 }
