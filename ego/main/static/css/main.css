@@ -65,17 +65,32 @@ footer {
 .worldMenu {
     background-color: #4c272780;
     width: 20%;
+    justify-content: left; /* Или left, в зависимости от вашего предпочтения */
     padding: 3px;
     justify-content: left;
 }
 
-.menuImageButton {
-    height: 40%;
+.menuButton {
+    border-radius: 50%;
+    justify-content: left ; /* Или left, в зависимости от вашего предпочтения */
+    align-items: self-start;
+    // height: 60%;
     width: 40%;
-    padding: 2pt;
-    justify-content: left;
-    justify-content: flex-start;
+    border: none; /* Убираем границы кнопки */
+    background: none; /* Убираем фон кнопки */
+    padding: 0; /* Убираем отступы внутри кнопки */
+    overflow: hidden; /* Скрываем изображение, выходящее за границы кнопки */
 }
+
+        .menuButton img {
+            display: block; /* Делаем изображение блочным элементом */
+            width: 100%; /* Заполняем всю доступную ширину кнопки */
+            height: auto; /* Автоматический расчет высоты для сохранения пропорций изображения */
+        }
+
+    .menu {
+        visibility: hidden;
+    }
 
 .worldMap {
     margin: 0;
