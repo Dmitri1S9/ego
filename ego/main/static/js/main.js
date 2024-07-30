@@ -3,10 +3,11 @@ function myFunction() {
 }
 
 function openMenu(propertyName, propertyValue) {
-    var element = document.getElementById("menuOptional");
-    if (element.style["visibility"] == "hidden") {
+    const element = document.getElementById("menuOptional");
+    if (element.style["visibility"] === "hidden") {
         element.style["visibility"] = "visible";
     } else {
         element.style["visibility"] = "hidden";
     }
 }
+

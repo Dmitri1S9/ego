@@ -96,6 +96,7 @@ footer {
     margin: 0;
     width: 80%;
     white-space: nowrap;
+    cursor: pointer;
 }
 
 .mapPiece {

@@ -1,47 +1,44 @@
+<!-- templates/drag_and_drop.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Drag and Drop</title>
+    <style>
+        .draggable {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            position: absolute;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <h1 class="main">Title</h1>
-    <p class="u_text">
-        Hello
-    </p>
-    <hr>
-    <p class="u_text" style="color:red; font-size:50%">
-        Das is meine Brief
-    </p>
-    <hr>
-    <pre class="u_text" style="font-size:400%">
-<b>I</b>
-<strong>'</strong>
-<i>m</i>
+<div id="draggable" class="draggable"></div>
 
-<em>t</em>
-<small>i</small>
-<mark>r</mark>
-<del>e</del>
-<ins>d</ins>
-!
-<sup>Roxy is God</sup>
-<b>Look up</b>
-<sub>Roxy is cute</sub>
-    </pre>
-    <p><q>Du darfst etwas sagen nicht</q></p>
-    <p><abbr title='Мокрые трусики'>MT</abbr></p>
-    {% load static %}
-    <img src="{% static 'img/2251833.jpg' %}" alt="My image">
-    <p><cite>Roxy</cite> from <bdo dir="rtl">iesneT ukohsuM</bdo></p>
-    <blockquote cite="https://mushokutensei.fandom.com/wiki/Roxy_Migurdia">
-        <cite>Roxy is the first Goddess that Rudeus worships in his exclusive religion, being the Goddess of Wisdom. Her holy panties are currently enshrined in the basement.</cite>
-    </blockquote>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const draggable = document.getElementById('draggable');
 
-    <address>
-        Am Arsch vorbei
-    </address>
-    <a href="{% url 'homePage' %}">HOME</a>
+        draggable.addEventListener('mousedown', function (e) {
+            const offsetX = e.clientX - parseInt(window.getComputedStyle(draggable).left);
+            const offsetY = e.clientY - parseInt(window.getComputedStyle(draggable).top);
 
+            function onMouseMove(e) {
+                draggable.style.left = e.clientX - offsetX + 'px';
+                draggable.style.top = e.clientY - offsetY + 'px';
+            }
+
+            function onMouseUp() {
+                document.removeEventListener('mousemove', onMouseMove);
+                document.removeEventListener('mouseup', onMouseUp);
+            }
+
+            document.addEventListener('mousemove', onMouseMove);
+            document.addEventListener('mouseup', onMouseUp);
+        });
+    });
+</script>
 </body>
 </html>

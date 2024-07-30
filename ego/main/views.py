@@ -11,3 +11,4 @@ def test(request):
 
 def world(request):
     return render(request, 'main/world.html')
+
