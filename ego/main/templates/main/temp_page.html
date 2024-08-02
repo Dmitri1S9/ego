@@ -10,26 +10,10 @@
 </head>
 <body>
 
-    <header>
-        <h1>Добро пожаловать на мой сайт</h1>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="{% url 'testPage' %}">Test page</a></li>
-            <li><a href="{% url 'worldPage' %}">World map</a></li>
-            <li><a href="#section3">Раздел 3</a></li>
-        </ul>
-    </nav>
-
     <main>
       {% block main %}
       {% endblock %}
     </main>
-
-    <footer>
-        <p>&copy; 2024 Мой Сайт. Все права защищены.</p>
-    </footer>
 
 </body>
 </html>

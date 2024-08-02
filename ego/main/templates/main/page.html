@@ -16,11 +16,13 @@
     </div>
 </div>
 
+<div id="mainArea">
+    <map id="worldMap">
+        {% load static %}
+        <script src="{% static 'js\mapMaker.js' %}"></script>
+        <!--<area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm"> -->
 
-<div class="worldMap" id="worldMap">
-    {% load static %}
-    <script src="{% static 'js\mapMaker.js' %}"></script>
-    <script src="{% static 'js\mapPageSettings.js' %}"></script>
+    </map>
 </div>
 
 {% endblock %}

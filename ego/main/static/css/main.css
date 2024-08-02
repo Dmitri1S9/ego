@@ -5,46 +5,8 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: #f4f4f4;
-    color: #333;
+    color: #ce0000;
 }
-
-header {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #333;
-    padding: 0.5em 0;
-    height: 50px; /* Устанавливаем высоту меню */
-}
-
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-    }
-
-    nav li {
-        margin-right: 10px; /* Уменьшаем отступ между элементами меню */
-        padding: 0 10px; /* Добавляем внутренний отступ */
-    }
-
-        nav li:hover {
-            background-color: #555; /* Цвет фона при наведении мыши */
-            cursor: pointer; /* Изменяем курсор при наведении */
-        }
-
-    nav a {
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-    }
 
 main {
     padding-right: 10px;
@@ -55,54 +17,57 @@ section {
     margin-bottom: 20px;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-}
-
 .worldMenu {
-    background-color: #4c272780;
-    width: 20%;
+    background-color: rgba(13, 243, 163, 0.89);
+    width:20vw;
     justify-content: left; /* Или left, в зависимости от вашего предпочтения */
     padding: 3px;
-    justify-content: left;
-}
+    height: 100vh;
 
-.menuButton {
-    border-radius: 50%;
-    justify-content: left ; /* Или left, в зависимости от вашего предпочтения */
-    align-items: self-start;
-    // height: 60%;
-    width: 40%;
-    border: none; /* Убираем границы кнопки */
-    background: none; /* Убираем фон кнопки */
-    padding: 0; /* Убираем отступы внутри кнопки */
-    overflow: hidden; /* Скрываем изображение, выходящее за границы кнопки */
 }
-
-        .menuButton img {
-            display: block; /* Делаем изображение блочным элементом */
-            width: 100%; /* Заполняем всю доступную ширину кнопки */
-            height: auto; /* Автоматический расчет высоты для сохранения пропорций изображения */
-        }
+    .menuButton {
+        border-radius: 50%;
+        justify-content: left ; /* Или left, в зависимости от вашего предпочтения */
+        align-items: self-start;
+        width: 40%;
+        border: none; /* Убираем границы кнопки */
+        background: none; /* Убираем фон кнопки */
+        padding: 0; /* Убираем отступы внутри кнопки */
+        overflow: hidden; /* Скрываем изображение, выходящее за границы кнопки */
+        z-index: 2;
+    }
+            .menuButton img {
+                display: block; /* Делаем изображение блочным элементом */
+                width: 100%; /* Заполняем всю доступную ширину кнопки */
+                height: auto; /* Автоматический расчет высоты для сохранения пропорций изображения */
+            }
 
     .menu {
         visibility: hidden;
     }
-
-.worldMap {
-    margin: 0;
-    width: 80%;
-    white-space: nowrap;
-    cursor: pointer;
+#mainArea {
+    height: 100vh;
+    width: 80vw;
+    justify-content: right;
+    overflow: hidden;
+    border: 2px solid #000;
+    position: relative;
 }
 
-.mapPiece {
-    height: 200px;
-    width: 200px;
-    padding: 0;
-    z-index: -1;
-    margin: 0;
-}
+#worldMap {
+        margin: 0;
+        width: 80%;
+        white-space: nowrap;
+        cursor: grab;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+        .mapPiece {
+            height: 200px;
+            width: 200px;
+            padding: 0;
+            z-index: -1;
+            margin: 0;
+        }
