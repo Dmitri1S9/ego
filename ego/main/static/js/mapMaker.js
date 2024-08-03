@@ -16,9 +16,13 @@ function makeRow(kol) {
 for (let j = 0; j < amountOfRows; j++) {
     makeRow(j);
 }
+let mapObject_ = document.createElement('figure');
+let festung = '<img class="mapObject" id="festung_1" src="static/img/buttons/festung.jpg" />';
+mapObject_.innerHTML = festung;
+document.getElementById('worldMap').appendChild(mapObject_);
 
 document.addEventListener('DOMContentLoaded', function () {
-
+    const festung1 = document.getElementById('festung_1')
     const worldMap = document.getElementById('worldMap');
     const mainArea = document.querySelector('#mainArea');
     let isDragging = false;
@@ -29,9 +33,13 @@ document.addEventListener('DOMContentLoaded', function () {
         startY = e.clientY;
         initialLeft = worldMap.offsetLeft;
         initialTop = worldMap.offsetTop;
-        document.addEventListener('mousedown', onMousedown)
-        document.addEventListener('mousemove', onMouseMove);
+        isDragging = true;
         document.addEventListener('mouseup', onMouseUp);
+        document.addEventListener('mousemove', onMouseMove);
+    });
+
+    festung1.addEventListener("dblclick", function (e){
+        alert();
     });
 
     function onMouseMove(e) {
@@ -42,15 +50,11 @@ document.addEventListener('DOMContentLoaded', function () {
             worldMap.style.top = initialTop + deltaY + 'px';
         }
     }
-
-    function onMousedown() {
-        isDragging = true;
-    }
-
     function onMouseUp() {
         isDragging = false;
         document.removeEventListener('mouseup', onMouseUp);
-        document.removeEventListener('mousedown', onMousedown)
         document.removeEventListener('mousemove', onMouseMove);
     }
 });
+
+
