@@ -22,39 +22,50 @@ mapObject_.innerHTML = festung;
 document.getElementById('worldMap').appendChild(mapObject_);
 
 document.addEventListener('DOMContentLoaded', function () {
-    const festung1 = document.getElementById('festung_1');
     const worldMap = document.getElementById('worldMap');
     let coordinateX = 0;
     let coordinateY = 0;
-    let dragging;
+    let dragging = false;
+    let shiftX, shiftY;
 
-    worldMap.addEventListener("dragstart", function (e ) {
-        let shiftX = e.clientX;
-        let shiftY = e.clientY;
+// Function for moving the map
+    function moveAt(pageX, pageY) {
+        worldMap.style.left = coordinateX + pageX - shiftX + 'px';
+        worldMap.style.top = coordinateY + pageY - shiftY + 'px';
+    }
 
-        // Функция для перемещения элемента
-        function moveAt(pageX, pageY) {
-            worldMap.style.left = coordinateX + pageX - shiftX + 'px';
-            worldMap.style.top = coordinateY + pageY - shiftY + 'px';
-            console.log(e.clientX, shiftX, e.clientY, shiftY);
+// When the mouse button is pressed down
+    worldMap.addEventListener("mousedown", function (e) {
+        dragging = true;
+        shiftX = e.clientX;
+        shiftY = e.clientY;
+
+        // When the mouse is moving
+        function onMouseMove(e) {
+            if (dragging) {
+                moveAt(e.clientX, e.clientY);
+            }
         }
 
-        // Обработчик движения мыши
-        function onDrag(e) {
-            moveAt(e.clientX, e.clientY);
+        // When the mouse button is released
+        function onMouseUp(e) {
+            dragging = false;
+            coordinateX += e.clientX - shiftX;
+            coordinateY += e.clientY - shiftY;
+
+            // Cleanup event listeners
+            document.removeEventListener('mousemove', onMouseMove);
+            document.removeEventListener('mouseup', onMouseUp);
         }
 
-        function ondragend(e){
-            coordinateX = e.clientX - shiftX;
-            coordinateY = e.clientY - shiftY;
-        }
-
-        document.addEventListener('drag', onDrag);
-        document.addEventListener('dragend', ondragend);
-
+        // Attach listeners for mousemove and mouseup
+        document.addEventListener('mousemove', onMouseMove);
+        document.addEventListener('mouseup', onMouseUp);
     });
 
-    festung1.addEventListener("dblclick", function () {
-        alert('Double-clicked!');
-    });
+// Prevent default drag behavior
+    worldMap.ondragstart = function() {
+        return false;
+    };
+
 });
