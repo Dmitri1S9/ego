@@ -9,13 +9,13 @@ from django.utils import timezone
 from .models import Choice, Question
 
 
-def print_start_html(request):
-    latest_question_list = Question.objects.order_by("-pub_date")[:5]
-    template = loader.get_template("main/login_page.html")
-    context = {
-        "latest_question_list": latest_question_list,
-    }
-    return HttpResponse(template.render(context, request))
+# def print_start_html(request):
+#     latest_question_list = Question.objects.order_by("-pub_date")[:5]
+#     template = loader.get_template("main/login_page.html")
+#     context = {
+#         "latest_question_list": latest_question_list,
+#     }
+#     return HttpResponse(template.render(context, request))
 
 
 def test(request):
@@ -37,7 +37,6 @@ class IndexView(generic.ListView):
     def get_queryset(self):
         """Return the last five published questions."""
         return Question.objects.filter(pub_date__lte=timezone.now()).order_by("-pub_date")[:5]
-
 
 
 class DetailView(generic.DetailView):
