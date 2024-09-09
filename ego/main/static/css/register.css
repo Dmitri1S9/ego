@@ -1,0 +1,78 @@
+body {
+  background: linear-gradient(to bottom, #2c3e50, #1a1a1a);
+  font-family: 'Cinzel', serif;
+  color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.registration-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #d4af37;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px 5px rgba(212, 175, 55, 0.5);
+}
+
+.fantasy-heading {
+  text-align: center;
+  font-size: 2.5em;
+  color: #d4af37;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px; /* Increased margin for better spacing */
+  display: grid;
+  place-items: center;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.2em;
+  color: #d4af37;
+  margin-bottom: 5px; /* Added margin to separate label from input */
+}
+
+.form-group input {
+  width: calc(100% - 30px); /* Adjusted width for better alignment */
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid transparent; /* Border added for better focus */
+  font-size: 1em;
+  background: rgba(255, 255, 255, 0.1);
+  color: #f4f4f4;
+  box-shadow: 0px 0px 5px 2px rgba(212, 175, 55, 0.5) inset;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.form-group input:focus {
+  outline: none;
+  box-shadow: 0px 0px 10px 4px rgba(212, 175, 55, 0.8) inset;
+  border-color: #d4af37; /* Added border color on focus */
+}
+
+.register-btn {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  padding: 15px; /* Increased padding for better button appearance */
+  background-color: #d4af37;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.register-btn:hover {
+  background-color: #c39735;
+}
+
+.register-btn:active {
+  background-color: #a88e2d; /* Darker color for active state */
+}
