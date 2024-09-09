@@ -18,7 +18,7 @@ section {
 }
 
 .worldMenu {
-    background-color: rgba(138, 0, 13, 0.58);
+    background-color: rgba(66, 10, 15, 0.58);
     width:20vw;
     justify-content: left; /* Или left, в зависимости от вашего предпочтения */
     padding: 3px;

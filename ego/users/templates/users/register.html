@@ -1,0 +1,25 @@
+{% extends 'users/base.html' %}
+
+{% block content %}
+<div class="registration-container">
+  <h1 class="fantasy-heading">Welcome to the Realm of Mystics</h1>
+  <form method="POST" action="{% url 'register' %}" class="registration-form">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="username">Choose Your Name</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Enchanted Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Mystic Password</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <div class="form-group">
+      <button type="submit"  class="register-btn">Enter the Realm</button>
+    </div>
+  </form>
+</div>
+{% endblock %}
