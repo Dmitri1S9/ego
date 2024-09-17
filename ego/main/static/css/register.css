@@ -1,78 +1,101 @@
 body {
-  background: linear-gradient(to bottom, #2c3e50, #1a1a1a);
+  background: #1b2b34; /* Темно-зеленый к темно-серому */
   font-family: 'Cinzel', serif;
-  color: #f4f4f4;
+  color: #d1d1d1; /* Светло-серый текст */
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;  /* Центрирование по горизонтали */
+  align-items: center;  /* Центрирование по вертикали */
+  height: 100vh;  /* Высота экрана */
+}
+
+#vjiro {
+  display: flex;
+  justify-content: space-between; /* Пространство между блоками */
+  gap: 0; /* Убирает промежуток между блоками */
+
 }
 
 .registration-container {
-  max-width: 500px;
-  margin: 50px auto;
+  flex: 1; /* Растягивает блоки равномерно */
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.8);
-  border: 2px solid #d4af37;
-  border-radius: 15px;
-  box-shadow: 0px 0px 20px 5px rgba(212, 175, 55, 0.5);
+  background-color: rgba(10, 10, 10, 0.9); /* Почти черный */
+  border: 2px solid #2e4d3c; /* Темно-зеленая рамка */
+  box-shadow: 0px 0px 20px 5px rgba(10, 10, 10, 0.6); /* Слабый черный тень */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.registration-container.swap {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.registration-container.swap-back {
+  transform: translateX(-100%);
+  opacity: 0;
 }
 
 .fantasy-heading {
   text-align: center;
   font-size: 2.5em;
-  color: #d4af37;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  color: #2e4d3c; /* Темно-зеленый заголовок */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Темная тень */
   margin-bottom: 20px;
 }
 
 .form-group {
-  margin-bottom: 20px; /* Increased margin for better spacing */
-  display: grid;
-  place-items: center;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column; /* Ставим элементы один под другим */
+  align-items: center;
 }
 
 .form-group label {
   display: block;
   font-size: 1.2em;
-  color: #d4af37;
-  margin-bottom: 5px; /* Added margin to separate label from input */
+  color: #2e4d3c; /* Темно-зеленый цвет для меток */
+  margin-bottom: 5px;
 }
 
 .form-group input {
-  width: calc(100% - 30px); /* Adjusted width for better alignment */
+  width: calc(100% - 30px);
   padding: 15px;
   border-radius: 8px;
-  border: 2px solid transparent; /* Border added for better focus */
+  border: 2px solid transparent;
   font-size: 1em;
-  background: rgba(255, 255, 255, 0.1);
-  color: #f4f4f4;
-  box-shadow: 0px 0px 5px 2px rgba(212, 175, 55, 0.5) inset;
-  transition: box-shadow 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.05); /* Очень светлый серый фон */
+  color: #d1d1d1; /* Светло-серый текст */
+  box-shadow: 0px 0px 5px 2px rgba(46, 77, 60, 0.5) inset; /* Внутренняя тень зеленого оттенка */
+  transition: box-shadow 0.5s ease-in-out;
 }
 
 .form-group input:focus {
   outline: none;
-  box-shadow: 0px 0px 10px 4px rgba(212, 175, 55, 0.8) inset;
-  border-color: #d4af37; /* Added border color on focus */
+  box-shadow: 0px 0px 10px 4px rgba(46, 77, 60, 0.8) inset; /* Темно-зеленая внутренняя тень */
+  border-color: #1f332a; /* Темно-зеленая рамка при фокусе */
 }
 
 .register-btn {
-  display: grid;
-  place-items: center;
   width: 100%;
-  padding: 15px; /* Increased padding for better button appearance */
-  background-color: #d4af37;
-  color: #1a1a1a;
+  padding: 15px;
+  background-color: #2e4d3c; /* Темно-зеленый фон */
+  color: #0f1417; /* Темно-серый текст */
   border: none;
   border-radius: 8px;
   font-size: 1.2em;
   cursor: pointer;
+  margin-bottom: 10px; /* Отступ между кнопками */
   transition: background-color 0.3s ease-in-out;
 }
 
 .register-btn:hover {
-  background-color: #c39735;
+  background-color: #1f332a; /* Более темный зеленый при наведении */
 }
 
 .register-btn:active {
-  background-color: #a88e2d; /* Darker color for active state */
+  background-color: #16241d; /* Еще более темный зеленый при клике */
 }
