@@ -1,50 +1,71 @@
 body {
-  background: #1b2b34; /* Темно-зеленый к темно-серому */
-  font-family: 'Cinzel', serif;
-  color: #d1d1d1; /* Светло-серый текст */
+  background: url('../img/sdv.jpg') no-repeat center center fixed; /* Укажите путь к изображению фэнтези */
+  background-size: cover; /* Покрывает весь фон изображения */
+  font-family: 'Cinzel', serif; /* Шрифт с поддержкой фэнтезийного стиля */
+  color: #e0e0e0; /* Светлый текст для контраста */
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;  /* Центрирование по горизонтали */
   align-items: center;  /* Центрирование по вертикали */
   height: 100vh;  /* Высота экрана */
+  position: relative;
+  overflow: hidden; /* Скрывает элементы, выходящие за пределы экрана */
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)); /* Градиент для более глубокого затемнения фона */
+  z-index: -1; /* Помещает псевдоэлемент за основной контент */
 }
 
 #vjiro {
   display: flex;
   justify-content: space-between; /* Пространство между блоками */
-  gap: 0; /* Убирает промежуток между блоками */
-
+  gap: 0; /* Убираем промежуток между блоками */
+  width: calc(80% + 40px); /* Ширина контейнера с добавлением дополнительного пространства для рамки */
+  max-width: 1200px; /* Максимальная ширина */
+  margin: 0 auto; /* Центрирование контейнера по горизонтали */
+  border-radius: 25px; /* Более округлые углы контейнера */
+  padding: 20px; /* Внутренний отступ для создания пространства вокруг внутренних контейнеров */
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.8); /* Более глубокая тень для выраженного эффекта */
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)); /* Градиентный фон для затемнения */
 }
 
 .registration-container {
   flex: 1; /* Растягивает блоки равномерно */
   padding: 20px;
-  background-color: rgba(10, 10, 10, 0.9); /* Почти черный */
-  border: 2px solid #2e4d3c; /* Темно-зеленая рамка */
-  box-shadow: 0px 0px 20px 5px rgba(10, 10, 10, 0.6); /* Слабый черный тень */
+  background: linear-gradient(135deg, rgba(30, 30, 30, 0.9), rgba(20, 20, 20, 0.8)); /* Градиентный фон для контейнеров */
+  border: 2px solid #6d4f28; /* Более светлый бронзовый цвет */
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.8); /* Более глубокая тень для контейнеров */
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.6s ease, opacity 0.6s ease; /* Плавные анимации */
 }
 
 .registration-container.swap {
   transform: translateX(100%);
-  opacity: 0;
+  opacity: 0.9;
 }
 
 .registration-container.swap-back {
   transform: translateX(-100%);
-  opacity: 0;
+  opacity: 0.9;
 }
 
 .fantasy-heading {
   text-align: center;
-  font-size: 2.5em;
-  color: #2e4d3c; /* Темно-зеленый заголовок */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Темная тень */
+  font-size: 2.5em; /* Умеренный размер шрифта для лучшего восприятия */
+  color: #72653f; /* Тёплый светло-золотистый цвет */
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.9); /* Более выраженная тень для лучшего контраста */
   margin-bottom: 20px;
+  font-family: 'Cinzel', serif; /* Используйте шрифт с хорошей поддержкой фэнтезийного стиля */
 }
 
 .form-group {
@@ -56,46 +77,49 @@ body {
 
 .form-group label {
   display: block;
-  font-size: 1.2em;
-  color: #2e4d3c; /* Темно-зеленый цвет для меток */
-  margin-bottom: 5px;
+  font-size: 1.2em; /* Умеренный размер шрифта */
+  color: #7a6c46; /* Тёплый светло-золотистый цвет */
+  margin-bottom: 8px;
+  font-family: 'Cinzel', serif; /* Используйте шрифт с хорошей поддержкой фэнтезийного стиля */
 }
 
 .form-group input {
   width: calc(100% - 30px);
-  padding: 15px;
-  border-radius: 8px;
-  border: 2px solid transparent;
-  font-size: 1em;
-  background: rgba(255, 255, 255, 0.05); /* Очень светлый серый фон */
-  color: #d1d1d1; /* Светло-серый текст */
-  box-shadow: 0px 0px 5px 2px rgba(46, 77, 60, 0.5) inset; /* Внутренняя тень зеленого оттенка */
-  transition: box-shadow 0.5s ease-in-out;
+  padding: 12px; /* Немного уменьшены отступы для более компактного вида */
+  border-radius: 15px; /* Более округлые углы */
+  border: 2px solid #7e755d; /* Светло-золотистая рамка */
+  font-size: 1.1em; /* Умеренный размер шрифта */
+  background: rgba(255, 255, 255, 0.1); /* Очень светлый фон с прозрачностью */
+  color: #866868; /* Светлый текст */
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.6) inset; /* Более выраженная внутренняя тень */
+  transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out; /* Плавные переходы */
 }
 
 .form-group input:focus {
   outline: none;
-  box-shadow: 0px 0px 10px 4px rgba(46, 77, 60, 0.8) inset; /* Темно-зеленая внутренняя тень */
-  border-color: #1f332a; /* Темно-зеленая рамка при фокусе */
+  box-shadow: 0px 0px 15px rgba(129, 118, 86, 0.9) inset; /* Более яркая внутренняя тень при фокусе */
+  border-color: #706238; /* Светло-золотистая рамка при фокусе */
 }
 
 .register-btn {
   width: 100%;
   padding: 15px;
-  background-color: #2e4d3c; /* Темно-зеленый фон */
-  color: #0f1417; /* Темно-серый текст */
+  background-color: #98834a; /* Светло-золотистый цвет фона */
+  color: #1e1e1e; /* Очень тёмный текст для контраста */
   border: none;
-  border-radius: 8px;
+  border-radius: 15px; /* Более округлые углы */
   font-size: 1.2em;
   cursor: pointer;
   margin-bottom: 10px; /* Отступ между кнопками */
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease; /* Плавные переходы */
 }
 
 .register-btn:hover {
-  background-color: #1f332a; /* Более темный зеленый при наведении */
+  background-color: #856849; /* Более тёмный золотистый при наведении */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.6); /* Тень при наведении */
 }
 
 .register-btn:active {
-  background-color: #16241d; /* Еще более темный зеленый при клике */
+  background-color: #8f6c45; /* Ещё более тёмный золотистый при клике */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8); /* Более яркая тень при клике */
 }

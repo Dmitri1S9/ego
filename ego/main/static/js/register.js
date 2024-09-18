@@ -12,29 +12,31 @@ document.addEventListener('DOMContentLoaded', function() {
       loginContainer.classList.add('swap-back');
       welcomeContainer.classList.add('swap');
 
+      container.style.flexDirection = 'row-reverse';
+      changeModeButton.textContent = 'LOGIN';
+      flag = false;
+
       // Удаляем классы после завершения анимации
       setTimeout(() => {
         loginContainer.classList.remove('swap-back');
         welcomeContainer.classList.remove('swap');
       }, 500); // Время должно совпадать с продолжительностью анимации в CSS
-
-      container.style.flexDirection = 'row-reverse';
-      changeModeButton.textContent = 'LOGIN';
-      flag = false;
+      
     }
     else {
       loginContainer.classList.add('swap');
       welcomeContainer.classList.add('swap-back');
 
+      container.style.flexDirection = 'row';
+      changeModeButton.textContent = 'REGISTRATION';
+      flag = true;
+      
       // Удаляем классы после завершения анимации
       setTimeout(() => {
         loginContainer.classList.remove('swap');
         welcomeContainer.classList.remove('swap-back');
       }, 500); // Время должно совпадать с продолжительностью анимации в CSS
 
-      container.style.flexDirection = 'row';
-      changeModeButton.textContent = 'REGISTRATION';
-      flag = true;
       }
 
   }
